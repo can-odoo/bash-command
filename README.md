@@ -14,5 +14,9 @@ Introducing some custom shorthand git and Odoo commands so that we can save our 
 * `gp` => git pull
 * `gpall` => will do `git fetch --all` `git fetch --all -p` `git pull`
 * `odv` This command will depend on file structure/directory_name of Odoo repo
+* `obin`:
+  * with default params ->  obin
+  * pass params -> `obin "database_name" "module_name" "port"`
+  * you can leave it empty if you want to pass default parma here for module_name-> `obin "db" "" "port"`
 
-**NOTE:** `.command.sh` and `.bashrc` were dot files means hidden files so to make it visible press `ctrl + h` and modify.
+**NOTE:** `.command.sh` and `.bashrc` were dot files meaning hidden files so to make it visible press `ctrl + h` and modify.
