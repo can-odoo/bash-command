@@ -14,3 +14,5 @@ Introducing some custom shorthand git and Odoo commands so that we can save our 
 * `gp` => git pull
 * `gpall` => will do `git fetch --all` `git fetch --all -p` `git pull`
 * `odv` This command will depend on file structure/directory_name of Odoo repo
+
+**NOTE:** `.command.sh` and `.bashrc` were dot files means hidden files so to make it visible press `ctrl + h` and modify.
