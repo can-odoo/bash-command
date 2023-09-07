@@ -44,6 +44,19 @@ function gpll() {
     echo "${Green}git pull done ------------------------";
 }
 
+# connect to odoo-server
+function obin() {
+    # $1 - database name -> default is test
+    # $2 - moule_name
+    # $3 - port -> default is 8069
+
+    # print command in terminal
+    echo -e "${Green}./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all";
+
+    # command execute
+    ./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all;
+}
+
 
 
 # ref:
