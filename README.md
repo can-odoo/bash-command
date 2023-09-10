@@ -1,7 +1,12 @@
 # bash-command 🧑‍💻
 Introducing some custom shorthand git and Odoo commands so that we can save our precious time.
 
-### Steps to setup:
+## Steps to setup (automatic):
+1. Clone the repo
+2. go to the clone location
+3. run `sh runme.sh` 🏃 **(That's it!)**
+
+### Steps to setup (manually):
 1. Clone the repo
 2. copy file path of `.commands.sh`
 3. open `~/.bashrc` in any text editor
