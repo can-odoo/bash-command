@@ -4,6 +4,7 @@
 # $1 $2 are positional args
 # Create custom bash command: [1]
 # After creating command file need to mention it on '.bashrc' file
+# now you just need to run `runme.sh` file and util commands will be added
 
 
 # global color variable
