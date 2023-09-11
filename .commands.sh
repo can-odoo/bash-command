@@ -9,6 +9,7 @@
 
 # global color variable
 Green='\033[0;32m'
+NC='\033[0m' # No Color (Resets color to default)
 
 # Depending on your file path change the 'cd <odoo_module_path>'
 # go to odoo/odoo_version/
@@ -30,19 +31,19 @@ function gc() {
 # git fetch, pull
 function gp() {
     git pull;
-    echo -e "${Green}git pull done ------------------------";
+    echo -e "${Green}git pull ${NC}";
 }
 
 # git fetch, pull
 function gpll() {
     git fetch --all;
-    echo "${Green}git fetch --all done ------------------------";
+    echo -e "${Green}[success] git fetch --all ${NC}";
 
     git fetch --all -p;
-    echo "${Green}git fetch --all -p done ------------------------";
+    echo -e "${Green}[success] git fetch --all -p ${NC}";
 
     git pull;
-    echo "${Green}git pull done ------------------------";
+    echo -e "${Green}[success] git pull ${NC}";
 }
 
 # connect to odoo-server
@@ -52,7 +53,7 @@ function obin() {
     # $3 - port -> default is 8069
 
     # print command in terminal
-    echo -e "${Green}./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all";
+    echo -e "${Green}./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all${NC}";
 
     # command execute
     ./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all;
