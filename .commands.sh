@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: gt command conflicts with genometools, find unique command
+# Command 'gt' not found, but can be installed with:
+#sudo apt install genometools
 
 # $1 $2 are positional args
 # Create custom bash command: [1]
@@ -53,10 +56,11 @@ function obin() {
     # $3 - port -> default is 8069
 
     # print command in terminal
-    echo -e "${Green}./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all${NC}";
+    echo -e "${Green}./odoo-bin --addons-path=addons/,../enterprise -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all${NC}";
+    echo -e "\e]8;;http://google.com\alocalhost:${3}\e]8;;\a";
 
     # command execute
-    ./odoo-bin --addons-path=addons/,../enterprise/ -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all;
+    ./odoo-bin --addons-path=addons/,../enterprise -d ${1:-test} -i base,$2 --xmlrpc-port ${3:-8069} --dev=all;
 }
 
 
