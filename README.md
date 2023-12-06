@@ -26,5 +26,9 @@ Introducing some custom shorthand git and Odoo commands so that we can save our 
   * with default params ->  obin
   * pass params -> `obin "database_name" "module_name" "port"`
   * you can leave it empty if you want to pass default parma here for module_name-> `obin "db" "" "port"`
+  
+* `otheme`:
+  * with default parama -> otheme (will create `website_theme` directory)
+  * pass params -> otheme `theme_odoo`
 
 **NOTE:** `.command.sh` and `.bashrc` were dot files meaning hidden files so to make it visible press `ctrl + h` and modify.
