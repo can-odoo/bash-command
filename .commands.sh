@@ -65,7 +65,7 @@ function obin() {
 
 function otheme() {
 
-    # use the default name or provided by user 
+    # use the default name or provided by user
     dir_name=${1:-website_theme}
     # mkdir website_theme
 
@@ -91,7 +91,7 @@ function otheme() {
     'category': 'Website/Theme',
     'version': '16.0.0',
     'author': 'Odoo',
-    'license': '...',
+    'license': 'LGPL-3',
     'depends': ['website'],
     'data': [
         'data/presets.xml',
@@ -112,6 +112,8 @@ function otheme() {
             # '$dir_name/static/src/js/theme.js',
         ],
     },
+    'installable': True,
+    'application': True,
 }
 " > __manifest__.py
 
